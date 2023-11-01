@@ -105,7 +105,7 @@ object L15_LazyEvaluation extends App {
     def #::[B>:A](element : B) : MyStream[B] //prepend operator
     def ++[B>:A](anotherStream : MyStream[B]): MyStream[B] // concate two streams
 
-    def foreach(f : A=>Unit) = Unit
+    def foreach(f : A=>Unit):  Unit
     def map[B](f: A=>B) : MyStream[B]
     def flatmap[B](f:A=>MyStream[B]) : MyStream[B]
     def filter(predicate : A=>Boolean) : MyStream[A]

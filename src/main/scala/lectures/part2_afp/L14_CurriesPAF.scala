@@ -6,6 +6,7 @@ object L14_CurriesPAF extends App {
   val superAdder: Int => Int => Int = x => y => x + y
 
   val adder3 = superAdder(3)
+//  val adder3 = superAdder(3)
   println(adder3(5))
   println(superAdder(3)(5))
 
