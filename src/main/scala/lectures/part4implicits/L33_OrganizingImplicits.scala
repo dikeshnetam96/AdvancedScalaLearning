@@ -67,4 +67,9 @@ object L33_OrganizingImplicits extends App {
     implicit val unitPriceOrdering : Ordering[Purchase] = Ordering.fromLessThan((a,b) => a.unitPrice<b.unitPrice)
   }
 
+  // call the specific implicit classes
+  import UnitPriceOrdering._
+  println(list.sorted)
+  
+
 }
